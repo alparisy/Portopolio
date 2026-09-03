@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Kreatif</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #38bdf8;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10%;
+            padding-top: 80px;
+        }
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .hero-text h1 span {
+            color: #38bdf8;
+        }
+        .hero-text p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+        }
+        .hero-img div {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #38bdf8, #6366f1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: morph 6s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+        .projects, .contact {
+            padding: 5rem 10%;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #1e293b;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-content {
+            padding: 1.5rem;
+        }
+        .project-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        .project-content p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        .contact-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 3rem;
+            border-radius: 1rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-box p {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .contact-btn {
+            background: #0f172a;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+        .contact-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Portofolio.</div>
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#projects">Proyek</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Halo, Saya <br><span>M.ALPI ALPARISY</span></h1>
+            <p>Saya membangun antarmuka web yang modern, interaktif, dan responsif dengan pengalaman pengguna terbaik.</p>
+            <a href="#projects" class="btn">Lihat Proyek</a>
+        </div>
+        <div class="hero-img">
+            <div></div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">Proyek Unggulan</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Aplikasi E-Commerce</h3>
+                    <p>Platform belanja online lengkap dengan sistem keranjang belanja dan integrasi pembayaran.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Dashboard Analitik</h3>
+                    <p>Antarmuka dasbor interaktif menggunakan visualisasi data real-time dan mode gelap.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Landing Page SaaS</h3>
+                    <p>Halaman pemasaran produk perangkat lunak berteknologi tinggi dengan animasi halus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-box">
+            <p>Tertarik untuk bekerja sama atau ingin mendiskusikan sebuah proyek? Jangan ragu untuk menghubungi saya melalui kontak di bawah ini.</p>
+            <div class="contact-links">
+                <!-- Ganti nomor WhatsApp (format internasional tanpa tanda +, misal: 6281234567890) -->
+                <a href="https://wa.me/628211670379?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda" target="_blank" class="contact-btn">WhatsApp</a>
+                <!-- Ganti alamat email -->
+                <a href="mailto:alfim1446@gmail.com" class="contact-btn">Kirim Email</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
